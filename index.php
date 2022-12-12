@@ -71,7 +71,7 @@
     <!-- PhP function for pulling in news posts ends -->
 
   </section>
-  <section class="two-column-grid-2 dark-sand">
+  <section class="two-column-grid-2 ">
 
     <!-- PhP function for pulling in news posts starts -->
     <?php
