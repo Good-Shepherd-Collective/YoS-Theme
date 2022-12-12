@@ -1,0 +1,466 @@
+/* 
+Theme Name: Youth of Sumud
+Author: Good Shepherd Collective
+Version: 1.0 
+*/
+
+/* ANDY BELL'S CSS RESET: https://piccalil.li/blog/a-modern-css-reset/ */
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,300;0,500;0,700;0,900;1,300;1,500;1,700;1,900&family=Source+Sans+Pro:ital,wght@0,300;0,600;0,900;1,300;1,600;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,300;0,500;0,700;0,900;1,300;1,500;1,700;1,900&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Source+Sans+Pro:ital,wght@0,300;0,600;0,900;1,300;1,600;1,900&display=swap');
+
+:root{
+  --red: #4a120f;
+  --dark-brown: #979486;
+  --light-brown: #dad7cc;
+  --black: #1a1a1a;
+}
+
+/*Box sizing rules*/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role='list'],
+ol[role='list'] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+   scroll-behavior: auto;
+  }
+  
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Fonts */
+
+h1{
+  font-size: 4.5em;
+  font-family: 'Merriweather', serif;
+}
+
+h2{
+  font-size: 3em;
+  font-family: 'Merriweather', serif;
+}
+
+h3{
+  font-size: 1.5em;
+  font-family: 'Merriweather', serif;
+}
+
+p{
+  font-size: 1.2em;
+  font-family: 'Open Sans', sans-serif;
+}
+
+a {
+  text-decoration: none !important;
+  color: inherit;
+}
+
+/* Fonts ends */
+
+/* nav */
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 15px 5%;
+  overflow: hidden;
+  background-color: var(--black);
+}
+
+li {
+  float: right;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 14px;
+  font-weight: 900;
+  color: var(--light-brown);
+  background-color: var(--black);
+}
+
+li a {
+  display: block;
+  padding: 8px;
+  background-color: var(--black);
+}
+
+li:hover {
+  text-decoration: underline;
+  color: aliceblue;
+}
+
+/* nav ends */
+
+.thumbnail {
+
+  height: 7em;
+  aspect-ratio: 1/1;
+  object-fit: cover;
+  border-radius: 5%;
+  border: 1px solid #1a1a1a;
+  display: inline;
+  transition: width 0.3s;
+}
+
+.auth-image-gsc {
+  width: 3em;
+  height: 3em;
+  border-radius: 50% !important;
+  filter: grayscale(1);
+  margin-top: 2em;
+  margin-bottom: 5px;
+}
+
+.author_name {
+  font-size: .8em;
+  font-weight: 800;
+}
+
+.author_email {
+  font-size: .8em;
+  font-weight: 800;
+  margin-bottom: 3em;
+}
+
+.blog {
+  overflow: hidden;
+  max-width: 25ch;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.tags {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  padding: 5px 10px;
+  margin-bottom: 5px;
+  word-break: keep-all !important;
+  border-radius: 10px;
+  display: inline-block;
+  /* From https://css.glass */
+background: rgba(255, 255, 255, 0.2);
+box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+backdrop-filter: blur(5px);
+-webkit-backdrop-filter: blur(5px);
+border: 1px solid rgba(9, 9, 9, 0.8);
+}
+
+.tags::before{
+  content: '#';
+}
+
+.spacer-40{
+  height: 40px;
+}
+
+/* containers */
+.light-sand {
+  background-image: url("https://i.imgur.com/qliG7ST.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+  color: var(--red);
+  padding: 18%;
+}
+.dark-sand {
+  background-image: url("https://i.imgur.com/cH424rH.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+  color: var(--light-brown);
+  padding: 18%;
+}
+
+.red {
+  background-color: var(--red);
+  color: var(--light-brown) !important;
+  padding: 5%;
+}
+
+.black {
+  background-color: var(--black);
+  color: var(--light-brown);
+  padding: 5%;
+}
+
+.full-container{
+  position: relative;
+  height: max-content;
+}
+
+.row {
+  height: 75vh;
+}
+
+.btn{
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 600;
+  border-radius: 20px;
+  font-size: 14px;
+  margin-top: 15%;
+  background-color: transparent;
+  padding: 10px 15px !important;
+  text-align: left;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  transition: all 0.5s;
+  cursor: pointer;
+  transition: 0.5s;
+  text-decoration: none !important;
+  display: block;
+  height: fit-content;
+  width: fit-content;
+
+}
+
+.btn:hover{
+  border-radius: 15px;
+}
+
+.btn-light-brown{
+  color: var(--light-brown);
+  border: solid 1px var(--light-brown); 
+}
+
+.btn-red{
+  color: var(--red);
+  border: solid 1px var(--red); 
+}
+
+
+
+
+
+
+/* grids */
+
+.three-row-grid{
+  display: grid;
+  grid-template-rows: repeat(3, 1fr);
+}
+
+.three-row-grid-r1{
+  grid-row-start: 15;
+}
+
+.two-column-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-column-gap: 0px;
+}
+
+.two-column-grid-1 {grid-area: 1/1}
+.two-column-grid-2 {grid-area: 1/2}
+
+@media all and (max-width: 800px) {
+  .two-column-grid {
+    grid-template-columns: 100%;
+    grid-template-rows: 2;
+  }
+  .two-column-grid-1 {grid-area: 1/1}
+.two-column-grid-2 {grid-area: 2/1}
+}
+
+.six-block-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  grid-column-gap: 15px;
+  grid-row-gap: 15px;
+  padding: 5%;
+  }
+
+.six-block-grid-1 { grid-area: 2 / 2 / 3 / 3; }
+.six-block-grid-2 { grid-area: 2 / 3 / 3 / 4; }
+.six-block-grid-3 { grid-area: 2 / 4 / 3 / 5; }
+.six-block-grid-4 { grid-area: 3 / 2 / 4 / 3; }
+.six-block-grid-5 { grid-area: 3 / 3 / 4 / 4; }
+.six-block-grid-6 { grid-area: 3 / 4 / 4 / 5; }
+
+@media all and (max-width: 800px) {
+  .six-block-grid {
+    
+    grid-template-rows: 6;
+    grid-column-gap: 0px;
+  }
+}
+
+@media all and (max-width: 800px) {
+  .six-block-grid-1 { grid-area: 1 / 1 / span 1 / span 5;}
+  .six-block-grid-2 { grid-area: 2 / 1 / span 1 / span 5;}
+  .six-block-grid-3 { grid-area: 3 / 1 / span 1 / span 5;}
+  .six-block-grid-4 { grid-area: 4 / 1 / span 1 / span 5;}
+  .six-block-grid-5 { grid-area: 5 / 1 / span 1 / span 5;}
+  .six-block-grid-6 { grid-area: 6 / 1 / span 1 / span 5;}
+}
+
+
+
+
+
+.red-box{
+    box-shadow:
+    1px 0 0 0 var(--red), 
+    0 1px 0 0 var(--red), 
+    1px 1px 0 0 var(--red),   /* Just to fix the corner */
+    1px 0 0 0 var(--red) inset, 
+    0 1px 0 0 var(--red) inset;
+    padding: 15px;
+  }
+
+  /* footer */
+
+  .nine-block-grid {
+    display: grid;
+    gap: 1.5rem;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+  }
+  .one {
+    grid-area: 1 / 1 / 1 / span 4;
+  }
+
+  .two{
+    grid-area: 2 / 1 / 2 / span 3;
+  }
+  
+  .nine{
+    grid-area: 3 / -1;
+    align-self: end;
+  }
+
+
+  .footer {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: 1fr;
+    grid-column-gap: 5%;
+    grid-row-gap: 5px;
+    padding: 5%;
+    background-color: var(--black);
+    color: var(--light-brown);
+    font-size: .8em;
+    }
+    
+    .footer-div1 { grid-area: 1 / 2 / 2 / 3; }
+    .footer-div2 { grid-area: 1 / 3 / 2 / 4; }
+    .footer-div3 { grid-area: 1 / 4 / 2 / 5; }
+
+    .columns {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      width: 100%;
+    }
+
+    .full-container{
+      margin: 0 auto;
+      display: -webkit-flex; /* Safari */     
+      display: flex; /* Standard syntax */
+    }
+    
+    .half-column {
+      min-height: 25vh;
+      float: left;
+      width: 50%;
+      padding: 5%;
+      border-collapse: collapse;
+      -webkit-flex: 1; /* Safari */
+      -ms-flex: 1; /* IE 10 */
+      flex: 1; /* Standard syntax */
+      box-shadow: 
+      3px 0 0 0 var(--black), 
+      0 3px 0 0 var(--black), 
+      3px 3px 0 0 var(--black),   /* Just to fix the corner */
+      3px 0 0 0 var(--black) inset, 
+      0 3px 0 0 var(--black) inset;
+    }
+    
+    .third-column {
+      float: left;
+      width: 33.33%;
+      padding: 5%;
+      border-collapse: collapse;
+      box-shadow: 
+      3px 0 0 0 var(--black), 
+      0 3px 0 0 var(--black), 
+      3px 3px 0 0 var(--black),   /* Just to fix the corner */
+      3px 0 0 0 var(--black) inset, 
+      0 3px 0 0 var(--black) inset;
+    }
+ 
+    @media all and (max-width: 800px) {
+      .third-column {
+        width: 100%;
+      }
+    }
+
+    
+    
+    
+    
+
