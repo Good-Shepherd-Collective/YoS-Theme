@@ -13,7 +13,6 @@ add_action('wp_enqueue_scripts', 'YoS_Files');
 # Function for setting excerpt count
 
 function get_excerpt( $count ) {
-  $permalink = get_permalink($post->ID);
   $excerpt = get_the_content();
   $excerpt = strip_tags($excerpt);
   $excerpt = substr($excerpt, 0, $count);
@@ -26,11 +25,11 @@ function get_excerpt( $count ) {
 
 # Function for getting title into web browser tab
 
-function YoS_title (){
+function yos_title(){
   add_theme_support('title-tag');
   }
 
-add_action('after_setup_theme','YoS-title');
+add_action('after_setup_theme','yos_title');
 
 # Function for getting title into web browser tab ends
 
@@ -39,6 +38,4 @@ add_theme_support( 'post-thumbnails' );
 # Function for getting tags
 
 ?>
-
-<?php
 
